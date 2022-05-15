@@ -1,0 +1,49 @@
+<div id="filme-escolhido" class="conteudo" *ngIf="filmeEscolhido">
+  <img
+    class="fechar-filme"
+    (click)="fecharFilme()"
+    src="https://cdn-icons-png.flaticon.com/512/2919/2919543.png"
+  />
+  <div class="filme-cartaz">
+    <img class="imagem cartaz" [src]="filmeEscolhido.imagem" alt="" />
+    <a target="blank" class="{{ abrir }}" (click)="abrirTrailer()"
+      >VER O TRAILER</a
+    >
+  </div>
+  <div class="info-filme">
+    <h1>{{ filmeEscolhido.nome }}</h1>
+    <div class="info-extra">
+      <p class="ano"><strong>Ano:</strong> {{ filmeEscolhido.ano }}</p>
+      <p><strong>Duração:</strong> {{ filmeEscolhido.duracao }}min</p>
+      <div class="nota">{{ filmeEscolhido.nota }}</div>
+      <div class="estrela">
+        <img [src]="filmeEscolhido.estrela" alt="estrela" />
+      </div>
+    </div>
+    <p><strong>Elenco:</strong> {{ filmeEscolhido.elenco }}</p>
+    <p><strong>Diretor:</strong> {{ filmeEscolhido.diretor }}</p>
+  </div>
+  <div class="video" *ngIf="trailer">
+    <iframe
+      class="youtube"
+      width="680"
+      height="380"
+      [src]="trailer"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>
+
+<!-- ============================================== -->
+<div class="filme-selecionado">
+  <img
+    *ngFor="let filme of filmes"
+    (click)="clicouImagem(filme)"
+    class="imagem lista"
+    [src]="filme.imagem"
+    alt=""
+  />
+</div>
