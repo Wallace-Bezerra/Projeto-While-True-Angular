@@ -1,4 +1,7 @@
 /* Add application styles & imports to this file! */
-body{
+body {
   margin: 0px;
+  background: rgba(44, 36, 191, 1);
+  background-position: center 0;
+  background-repeat: no-repeat;
 }
