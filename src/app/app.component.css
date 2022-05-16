@@ -57,6 +57,8 @@ strong {
   border-radius: 8px;
   justify-self: center;
   cursor: pointer;
+  opacity: 1;
+  transition: 1s ease;
 
   /* margin-right: 15px; */
 }
@@ -118,18 +120,26 @@ strong {
   font-family: 'Roboto', sans-serif;
   font-weight: 1000;
   font-size: 24px;
+  transition: 1s ease;
+  cursor: pointer;
 }
 
 .botao-trailer:hover {
-  opacity: 80%;
+  opacity: 0.5;
+  transition: 1s ease;
 }
 
 .filme-selecionado {
-  margin: 20px 30px;
+  margin: 20px 66px;
   display: flex;
 
   flex-wrap: wrap;
   gap: 10px;
+}
+
+.imagem.lista:hover {
+  opacity: 0.5;
+  transition: 1s ease;
 }
 
 /* ================= */
